@@ -65,6 +65,8 @@ h1 {
 	position: absolute;
 	display: none;
 	margin: 10px;
+	left: 38%;
+	z-index: 100;
 }
 
 .submenu > ul > li {
@@ -74,7 +76,11 @@ h1 {
 	padding: 10px;
 }
 
-.submenu:hover ul	{
+.submenu > ul > li > a {
+	color: black;
+}
+
+.submenu:hover 	ul{
 	display: block;
 }
 
