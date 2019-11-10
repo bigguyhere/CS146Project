@@ -14,8 +14,8 @@
 	  <LI class = "submenu">Quizzes
 	    <UL>
 	      <LI><a href = "depressionQuiz.html">Depression</a></LI>
-	      <LI>Submenu2</LI>
-	      <LI>Submenu3</LI>
+	      <LI>Anxiety</LI>
+	      <LI>ADHD</LI>
 	    </UL>
 	  </LI>
 	  <LI><a href = "https://www.stevens.edu/directory/counseling-and-psychological-services">Main Website</a></LI>
@@ -24,7 +24,59 @@
       </div>
     </header>
     <div class = "mainText">
-        <p> Quiz</p>
+      <form>
+	<h2 class = "center">Below is a set of questions that depict traits of those who
+	   have been diagnosed with depression. Make sure to read every
+	   question carefully and answer each question to the best of
+	   your ability.
+	</h2>
+	<p>Enter your name:</p>
+	<input type="text" name="name" placeholder="Name">
+	<br>
+	<p>Enter your CWID:</p>
+	<input type="text" name="cwid" placeholder="CWID">
+	<br>
+	<br>
+	<p>How often do you find little interest or pleasure in doing things?</p>
+	<div>
+	  <input type="radio" name = "Q1answers" id ="Q1answers1" value="1">
+	  <label for= "Q1answers1">Very Often (6-7 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q1answers" id ="Q1answers2" value="2">
+	  <label for= "Q1answers2">Often (4-5 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q1answers" id ="Q1answers3" value="3">
+	  <label for= "Q1answers3">Somewhat Often (2-3 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q1answers" id ="Q1answers4" value="4">
+	  <label for= "Q1answers4">Never (0-1 day a week)</label>
+	</div>
+	<br>
+	<p>How often do you feel depressed or hopeless?</p>
+	<div>
+	  <input type="radio" name = "Q2answers" id ="Q2answers1" value="1">
+	  <label for= "Q2answers1">Very Often (6-7 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q2answers" id ="Q2answers2" value="2">
+	  <label for= "Q2answers2">Often (4-5 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q2answers" id ="Q2answers3" value="3">
+	  <label for= "Q2answers3">Somewhat Often (2-3 days a week)</label>
+	</div>
+	<div>
+	  <input type="radio" name = "Q2answers" id ="Q2answers4" value="4">
+	  <label for= "Q2answers4">Never (0-1 day a week)</label>
+	</div>
+	<br>
+	<br>
+	<input type="submit" value = "Submit">
+	<br>
+      </form>
     </div>
   </body>
 </html>
