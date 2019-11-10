@@ -4,6 +4,12 @@ body {
 
 h1 {
 	text-align: center;
+	font-family: Verdana, Helvetica, serif;
+}
+
+h3 {
+	padding-left: 16px;
+	font-family: Verdana, Helvetica, serif;
 }
 
 .images {
@@ -11,6 +17,12 @@ h1 {
 	width: 400px;
 	height: 200px;
 	margin: 0 auto;
+}
+
+#construction {
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
 }
 
 #notlogo {
@@ -40,16 +52,11 @@ h1 {
 .mainText {
 	background-color: white;
 	margin: 16px auto 16px auto;
-	padding: 16px 0 16px 0;
+	padding: 16px;
 	box-shadow: 0px 0px 4px black;
 	border-radius: 4px;
-	width: 1000px;
+	width: 80%;
 	height: 100%;
-}
-
-.mainText > form > p {
-	padding-left: 16px;
-	font-weight: bold;
 }
 
 .mainText > form > div {
@@ -88,20 +95,12 @@ h1 {
 	padding: 10px;
 }
 
-.submenu > ul > li > a {
-	color: black;
-}
-
-.submenu:hover 	ul{
-	display: block;
-}
-
-.submenu > ul > li:hover {
-	background-color: #f3f3f3;
-}
-
 input {
 	margin-left: 50px;
+}
+
+label {
+	font-family: Roboto, Helvetica, serif;
 }
 
 .center {
@@ -111,4 +110,89 @@ input {
 LI a {
 	text-decoration: none;
 	color: white;
+}
+
+@media only screen and (min-width:999px) {
+	.submenu:hover 	ul{
+		display: block;
+	}
+	.submenu > ul > li:hover 
+	{
+		background-color: #f3f3f3;
+	}
+	.submenu > ul > li > a 
+	{
+		color: black;
+	}
+}
+
+@media only screen and (max-width:998px) and (min-width:400px) {
+	.menuBar {
+		margin: auto;
+	}
+	.menuBar > ul > li{
+		padding: 5px;
+	}
+	.submenu:hover 	ul{
+		display: block;
+	}
+	.submenu > ul > li:hover 
+	{
+		background-color: #f3f3f3;
+	}
+	.submenu > ul > li > a 
+	{
+		color: black;
+	}
+}
+
+@media only screen and (max-width:399px) {
+	.menuBar > ul{
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+	}
+	.submenu {
+		margin-left: 0;
+		left: 0;
+	}
+	.submenu > ul{
+		margin: 0;
+		padding: 0;
+		display: block;
+		position: relative;
+		left: 0;
+	}
+	.submenu > ul > li {
+		margin: 16px 0 0 0;
+		padding: 0;
+		background-color: transparent;
+		font-size: 14px;
+	}
+	.submenu > ul > li:hover a{
+		color: #A9A9A9
+	}
+	.images {
+		width: 200px;
+		height: 100px;
+	}
+	#logo {
+		max-width: 200px;
+		max-height: 200px;
+	}
+	#notlogo {
+		max-width: 100px;
+		max-height: 100px;
+		margin-left: 70px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 15px;
+	}
+	label {
+		font-size: 11px;
+	}
 }
