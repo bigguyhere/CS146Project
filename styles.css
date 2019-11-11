@@ -92,7 +92,7 @@ p a {
 .submenu > ul{
 	position: absolute;
 	display: none;
-	margin: none;
+	margin: 0;
 	float: left;
 	z-index: 100;
 }
