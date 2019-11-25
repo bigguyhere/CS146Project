@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Psychological Profile: Anxiety</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="diagnosis.js"></script>
   </head>
   <body>
     <header>
@@ -24,35 +25,35 @@
       </div>
     </header>
     <div class = "mainText">
-      <form action="diagnosis.html" method="post" id="quiz">
+      <form method="post" id="quiz">
 	<h2 class = "center">Below is a set of questions that depict traits of those who
 	   have been diagnosed with general anxiety. Make sure to read every
 	   question carefully and answer each question to the best of
 	   your ability.
 	</h2>
 	<h3>Enter your full name:</h3>
-	<input type="text" name="name" placeholder="Name">
+	<input type="text" name="name" pattern= "[A-Za-z\s]+" placeholder="Name" required>
 	<br>
 	<h3>Enter your CWID:</h3>
-	<input type="text" name="cwid" placeholder="CWID">
+	<input type="text" name="cwid" pattern="[0-9]{8}" placeholder="CWID" required>
 	<br>
 	<br>
 	<div>
 	  <h3>Do you experience a lot of worry or anxiety that is difficult to control?</h3>
 	  <div>
-	    <input type="radio" name = "Q1answers" id ="Q1answer1" value="1">
+	    <input type="radio" name = "Q1answers" id ="Q1answer1" value="1" required>
 	    <label for= "Q1answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q1answers" id ="Q1answer2" value="2">
+	    <input type="radio" name = "Q1answers" id ="Q1answer2" value="2" required>
 	    <label for= "Q1answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q1answers" id ="Q1answer3" value="3">
+	    <input type="radio" name = "Q1answers" id ="Q1answer3" value="3" required>
 	    <label for= "Q1answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q1answers" id ="Q1answer4" value="4">
+	    <input type="radio" name = "Q1answers" id ="Q1answer4" value="4" required>
 	    <label for= "Q1answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
@@ -60,38 +61,38 @@
 	<div>
 	  <h3>Does anxiety or worry make you feel irritable, fatigued, or unwell?</h3>
 	  <div>
-	    <input type="radio" name = "Q2answers" id ="Q2answer1" value="1">
+	    <input type="radio" name = "Q2answers" id ="Q2answer1" value="1" required>
 	    <label for= "Q2answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q2answers" id ="Q2answer2" value="2">
+	    <input type="radio" name = "Q2answers" id ="Q2answer2" value="2" required>
 	    <label for= "Q2answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q2answers" id ="Q2answer3" value="3">
+	    <input type="radio" name = "Q2answers" id ="Q2answer3" value="3" required>
 	    <label for= "Q2answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q2answers" id ="Q2answer4" value="4">
+	    <input type="radio" name = "Q2answers" id ="Q2answer4" value="4" required>
 	    <label for= "Q2answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
 	<div>
 	  <h3>Do you ever feel as you experience repetive and persistent thought that are unwanted or upsetting?</h3>
 	  <div>
-	    <input type="radio" name = "Q3answers" id ="Q3answer1" value="1">
+	    <input type="radio" name = "Q3answers" id ="Q3answer1" value="1" required>
 	    <label for= "Q3answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q3answers" id ="Q3answer2" value="2">
+	    <input type="radio" name = "Q3answers" id ="Q3answer2" value="2" required>
 	    <label for= "Q3answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q3answers" id ="Q3answer3" value="3">
+	    <input type="radio" name = "Q3answers" id ="Q3answer3" value="3" required>
 	    <label for= "Q3answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q3answers" id ="Q3answer4" value="4">
+	    <input type="radio" name = "Q3answers" id ="Q3answer4" value="4" required>
 	    <label for= "Q3answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
@@ -99,19 +100,19 @@
 	<div>
 	  <h3>Do you experience strong fear that causes any of the following symptoms: panic, shortness of breath, chest pains, a pounding heart, sweating, shaking, nausea, dizziness, and/or fear of dying?</h3>
 	  <div>
-	    <input type="radio" name = "Q4answers" id ="Q4answer1" value="1">
+	    <input type="radio" name = "Q4answers" id ="Q4answer1" value="1" required>
 	    <label for= "Q4answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q4answers" id ="Q4answer2" value="2">
+	    <input type="radio" name = "Q4answers" id ="Q4answer2" value="2" required>
 	    <label for= "Q4answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q4answers" id ="Q4answer3" value="3">
+	    <input type="radio" name = "Q4answers" id ="Q4answer3" value="3" required>
 	    <label for= "Q4answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q4answers" id ="Q4answer4" value="4">
+	    <input type="radio" name = "Q4answers" id ="Q4answer4" value="4" required>
 	    <label for= "Q4answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
@@ -119,19 +120,19 @@
 	<div>
 	  <h3>Do you avoid places or social situations in fear of the panic you feel?</h3>
 	  <div>
-	    <input type="radio" name = "Q5answers" id ="Q5answer1" value="1">
+	    <input type="radio" name = "Q5answers" id ="Q5answer1" value="1" required>
 	    <label for= "Q5answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q5answers" id ="Q5answer2" value="2">
+	    <input type="radio" name = "Q5answers" id ="Q5answer2" value="2" required>
 	    <label for= "Q5answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q5answers" id ="Q5answer3" value="3">
+	    <input type="radio" name = "Q5answers" id ="Q5answer3" value="3" required>
 	    <label for= "Q5answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q5answers" id ="Q5answer4" value="4">
+	    <input type="radio" name = "Q5answers" id ="Q5answer4" value="4" required>
 	    <label for= "Q5answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
@@ -139,27 +140,42 @@
 	<div>
 	  <h3>Do you engange in repetitive activities to manage your worry?</h3>
 	  <div>
-	    <input type="radio" name = "Q6answers" id ="Q6answer1" value="1">
+	    <input type="radio" name = "Q6answers" id ="Q6answer1" value="1" required>
 	    <label for= "Q6answer1">Very Often (6-7 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q6answers" id ="Q6answer2" value="2">
+	    <input type="radio" name = "Q6answers" id ="Q6answer2" value="2" required>
 	    <label for= "Q6answer2">Often (4-5 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q6answers" id ="Q6answer3" value="3">
+	    <input type="radio" name = "Q6answers" id ="Q6answer3" value="3" required>
 	    <label for= "Q6answer3">Somewhat Often (2-3 days a week)</label>
 	  </div>
 	  <div>
-	    <input type="radio" name = "Q6answers" id ="Q6answer4" value="4">
+	    <input type="radio" name = "Q6answers" id ="Q6answer4" value="4" required>
 	    <label for= "Q6answer4">Never (0-1 day a week)</label>
 	  </div>
 	</div>
 	<br>
 	<br>
 	<input type="submit" value = "Submit">
+	<input type="reset" value = "Reset">
 	<br>
-      </form>
+	  </form>
+	  <form class="hidden">
+			<h3>Display Detailed Results?</h3>
+			<div>
+				<input type="radio" name="Results" id="Hide" onclick="hideTable()">
+				<label for="Hide">Hide Detailed Results</label>
+			</div>
+			<div >
+				<input type="radio" name="Results" id="Show" onclick="showTable()">
+				<label for="Show">Show Detailed Results</label>
+			</div>
+			<br>
+		  </form>
+		  <table>
+		  </table>
     </div>
   </body>
 </html>
