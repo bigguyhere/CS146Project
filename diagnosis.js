@@ -21,6 +21,7 @@
      * Calls determineResults to find the results of the quiz
      * Calls createTable to create the detailed results of the quiz
      * Creates the h2 element that displays the results of the quiz
+     * Changes the message on the h3 element based on the results of the quiz
      * @param {Event} event the submit event of the id="quiz" form
      */
     function hideQuiz(event) {
@@ -30,17 +31,30 @@
         var quiz = document.getElementById("quiz");
         var data = new FormData(quiz);
         var detailedResults = document.getElementsByTagName("table")[0];
+        var newForm = document.getElementsByClassName("hidden")[0];
         
         quiz.style.display = "none";
-        document.getElementsByClassName("hidden")[0].style.display = "initial";
+        newForm.style.display = "initial";
 
         var results = determineResults(data);
         createTable(data, detailedResults, results);
 
         var h2 = document.createElement("h2");
-        h2.id = "results"
-        h2.textContent = "Your Results are: " +  (Math.round(results* 100)) + "%"
-        document.getElementsByClassName("hidden")[0].appendChild(h2);
+        h2.id = "results";
+        h2.textContent = "Your Results are: " +  (Math.round(results* 100)) + "%";
+        newForm.appendChild(h2);
+
+        var h3 = document.createElement("h3");
+        h3.id = "message";
+        
+        if(results > 2/3)
+            h3.textContent = "You are most likely suffering from " + document.getElementsByTagName("body")[0].id + ". Please contanct CAPS immediately at caps@stevens.edu OR 201.216.5177.";
+        else if(results > 1/3)
+            h3.textContent = "You are mostly likely suffering from mild " + document.getElementsByTagName("body")[0].id + ". We recommend you come into CAPS the next time you're free."
+        else
+            h3.textContent = "You most likely have little to no symptoms of " + document.getElementsByTagName("body")[0].id + ". There is no need for you to come into the CAPS offices."
+
+        newForm.appendChild(h3);
     }
 
     /**
