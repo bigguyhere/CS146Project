@@ -146,7 +146,7 @@
         var answers = {};
         for (i = 0; i < Qnum; i++)
         {
-            var name = id + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q" + (i + 1).toString() + "answers";
+            var name = id + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q" + (i + 1).toString().padStart(2, '0') + "answers";
             var ans = window.localStorage.getItem(name);
             answers[name] = ans;
         }
@@ -226,7 +226,7 @@
         //update answers
         for (var key in QnA){
             var Qs = key.split(' ');
-            ans = document.getElementById('ans for ' + Qs[2]);
+            var ans = document.getElementById('ans for ' + Qs[2]);
             ans.textContent = frequency[QnA[key]];
         }
     }
@@ -241,7 +241,7 @@
 
         //add forms
         for (var i = 0; i < currID; i++){
-            var storedFormQ1 = window.localStorage.getItem( (i + 1).toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q1answers");
+            var storedFormQ1 = window.localStorage.getItem( (i + 1).toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q01answers");
             if (storedFormQ1 != null){
                 var option = document.createElement("option");
                 option.value = (i + 1).toString();
@@ -263,11 +263,11 @@
 
         //add forms
         for (var i = 1; i <= currID; i++){
-            var storedFormQ1 = window.localStorage.getItem( i.toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q1answers");
+            var storedFormQ1 = window.localStorage.getItem( i.toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q01answers");
             if (storedFormQ1 != null && i != currID){
                 options[0].remove();
                 for (var j = 1; j <= Qnum; j++){
-                    window.localStorage.removeItem( i.toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q" + j.toString() + "answers");
+                    window.localStorage.removeItem( i.toString() + ' ' + document.getElementsByTagName("body")[0].id + ' ' + "Q" + j.toString().padStart(2, '0') + "answers");
                 }
             }
             else if (i == currID){
