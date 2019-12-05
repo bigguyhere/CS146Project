@@ -25,6 +25,11 @@
       </div>
     </header>
     <div class = "mainText">
+	<br>
+	<div id="selectorMessage">Submissions: 
+		<select onchange="refresh(this.value);" id ="selector"></select>
+		<button type="button" onclick="clearForms();" value="clear">Clear History</button>
+	</div>
     <form method="post" id="quiz">
 	<h2 class = "center">Below is a set of questions that depict traits of those who
 	   have been diagnosed with depression. Make sure to read every

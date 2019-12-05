@@ -12,6 +12,11 @@ h3 {
 	font-family: Verdana, Helvetica, serif;
 }
 
+button {
+	font-family: Verdana, Helvetica, serif;
+	font-weight: bold;
+}
+
 p {
 	padding-left: 20px;
 }
@@ -47,6 +52,15 @@ p a {
 	max-height: 400px;
 	position: absolute;
 	z-index: -1;	
+}
+
+#selector {
+	font-family: Verdana, Helvetica, serif;
+}
+#selectorMessage {
+	padding-left: 16px;
+	font-family: Verdana, Helvetica, serif;
+	font-weight: bold;
 }
 
 .menuBar {
