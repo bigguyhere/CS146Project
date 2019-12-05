@@ -179,7 +179,7 @@
                 var newRow = document.createElement("tr");
 
                 newTD.textContent = frequency[pair[1]];
-                questionNum.textContent = "Question " + pair[0].charAt(1) + ":";
+                questionNum.textContent = "Question " + pair[0].substr(1,2) + ":";
 
                 newRow.appendChild(questionNum);
                 newRow.appendChild(newTD);
